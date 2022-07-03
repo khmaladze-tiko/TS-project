@@ -1,2 +1,2 @@
-require('./build/interfaces/example-2');
+require('./build/index');
 
