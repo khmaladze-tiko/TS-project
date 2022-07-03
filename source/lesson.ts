@@ -1,33 +1,35 @@
 interface Lesson {
-    saxeli: string;
+    name: string;
     coefficient: number;
-    sirtuleDone: string;
-    classNum: number[];
+    level: string;
+    fromClass: number;
+    teachers: string[];
 }
-export const lessons: Lesson [] = [
+let lessonsArray: Lesson [] = [
     {
-        saxeli: 'Russian',
+        name: 'Russian',
         coefficient: 8,
-        sirtuleDone: '',
-        classNum: [5],
+        level: '',
+        fromClass: 5,
+        teachers: ['Jane Doe'],
     },
-    {
-        saxeli: 'English',
-        coefficient: 5,
-        sirtuleDone: '',
-        classNum: [5],
-    },
-    {
-        saxeli: 'Math',
-        coefficient: 10,
-        sirtuleDone: '',
-        classNum: [5],
-    },
-    {
-        saxeli: 'Georgian',
-        coefficient: 7,
-        sirtuleDone: '',
-        classNum: [5],
-    },
+    // {
+    //     name: 'English',
+    //     coefficient: 5,
+    //     level: '',
+    //     fromClass: 5,
+    // },
+    // {
+    //     name: 'Math',
+    //     coefficient: 10,
+    //     level: '',
+    //     fromClass: 5,
+    // },
+    // {
+    //     name: 'Georgian',
+    //     coefficient: 7,
+    //     level: '',
+    //     fromClass: 5,
+    // },
 ]
-console.log(lessons)
+console.log(lessonsArray)
