@@ -61,7 +61,7 @@ let setSubjectAndPoint = function (
     }
 };
 
-// აქ მგონი სახელები ამერია და ვერ გავაკეთე, მიწითლებს
+
 
 let teachersInList = (teacher: Teacher) => {
     // teacher.subjects.forEach((subject: string) => {
@@ -161,3 +161,79 @@ const assignCoeficient = () => {
 }
 
 assignCoeficient()
+
+
+
+let studentOrTeacher = function <T>(arg: T) {
+    if ('email' in arg) {
+        console.log('Teacher')
+    } else {
+        console.log('Student')
+    }
+};
+studentOrTeacher<Student>({
+    id: 111,
+    firstName: 'Elena',
+    lastName: 'Durova',
+    age: 10,
+    subInfo: [
+        {
+            subjects: 'Russian',
+            point: 10,
+        },
+        {
+            subjects: 'English',
+            point: 7,
+        },
+        {
+            subjects: 'Math',
+            point: 8,
+        },
+        {
+            subjects: 'Georgian',
+            point: 7,
+        },
+    ],
+    classes: 5,
+},
+)
+
+//2. generic ფუნქცია, რომელსაც გადაეცემა მოსწავლე ან საგანი, თუ გადაეცემა საგანი დალოგავს
+// ყველა იმ მოსწავლეს, რომელიც ამ საგანს გადის, ხოლო თუ მოსწავლეა დალოგავს ყველა იმ საგნის
+// სირთულის კოეფიციენტს, რომელსაც სწავლობს
+
+// let studentOrlesson = function <T> (arg: T){
+       
+//     // if ('coefficient' in arg) {
+//     //     console.log(subInfo.subjects)
+//     // } else console.log(lesson.coefficient)
+    
+// }
+
+// studentOrlesson<Student>(
+//     {
+//         id: 111,
+//         firstName: 'Elena',
+//         lastName: 'Durova',
+//         age: 10,
+//         subInfo: [
+//             {
+//                 subjects: 'Russian',
+//                 point: 10,
+//             },
+//             {
+//                 subjects: 'English',
+//                 point: 7,
+//             },
+//             {
+//                 subjects: 'Math',
+//                 point: 8,
+//             },
+//             {
+//                 subjects: 'Georgian',
+//                 point: 7,
+//             },
+//         ],
+//         classes: 5,
+//     }
+// )
