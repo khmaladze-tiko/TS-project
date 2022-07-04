@@ -1,18 +1,42 @@
-interface Lesson {
+export interface Lesson {
     name: string;
     coefficient: number;
-    level: string;
+    level: Levels | null;
     fromClass: number;
     teachers: string[];
 }
-let lessonsArray: Lesson [] = [
+
+export type Levels = 'Hard' | 'Average' | 'Easy'
+export let lessonsArray: Lesson[] = [
     {
         name: 'Russian',
-        coefficient: 8,
-        level: '',
+        coefficient: 0,
+        level: null,
         fromClass: 5,
         teachers: ['Jane Doe'],
     },
+    {
+        name: 'English',
+        coefficient: 0,
+        level: null,
+        fromClass: 5,
+        teachers: ['Jane Doe'],
+    },
+    {
+        name: 'Georgian',
+        coefficient: 0,
+        level: null,
+        fromClass: 5,
+        teachers: ['Jane Doe'],
+    },
+    {
+        name: 'Bulgarian',
+        coefficient: 0,
+        level: null,
+        fromClass: 5,
+        teachers: ['Jane Doe'],
+    },
+
     // {
     //     name: 'English',
     //     coefficient: 5,

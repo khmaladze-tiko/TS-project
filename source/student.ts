@@ -1,12 +1,16 @@
+export interface SubInfo {
+    subjects: string;
+    point: number
+}
 export interface Student {
     id: number;
     firstName: string;
     lastName: string;
     age: number;
-    subInfo: {subjects: string; subScore: number}[];
+    subInfo: SubInfo[];
     classes: number;
 }
-export let studentsArray:Student[] = [
+export let studentsArray: Student[] = [
     {
         id: 111,
         firstName: 'Elena',
@@ -15,19 +19,19 @@ export let studentsArray:Student[] = [
         subInfo: [
             {
                 subjects: 'Russian',
-                subScore: 10,
+                point: 10,
             },
             {
                 subjects: 'English',
-                subScore: 7,
+                point: 7,
             },
             {
                 subjects: 'Math',
-                subScore: 8,
+                point: 8,
             },
             {
                 subjects: 'Georgian',
-                subScore: 7,
+                point: 7,
             },
         ],
         classes: 5,
